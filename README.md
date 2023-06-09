@@ -1,5 +1,39 @@
 ## memo
 
+- curl で叩いてみた
+
+```
+curl https://api.openai.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -d '{
+    "model": "gpt-3.5-turbo",
+    "messages": [{"role": "user", "content": "Hello!"}]
+  }'
+
+{
+  "id": "chatcmpl-7PM17IO2wup77o47vTh7jGxD2NbsX",
+  "object": "chat.completion",
+  "created": 1686277189,
+  "model": "gpt-3.5-turbo-0301",
+  "usage": {
+    "prompt_tokens": 10,
+    "completion_tokens": 10,
+    "total_tokens": 20
+  },
+  "choices": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": "Hello there! How can I assist you today?"
+      },
+      "finish_reason": "stop",
+      "index": 0
+    }
+  ]
+}
+```
+
 - ChatCPT からのレスポンス
 
 ````
