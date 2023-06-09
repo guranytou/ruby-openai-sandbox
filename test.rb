@@ -48,6 +48,6 @@ books = response_data.map do |book|
 end
 
 
-# # 出力
-puts "books: #{books}\n"
-puts "1冊目のタイトル: #{books[0][:title]}\n"
+# 出力
+print "books: #{books}\n"
+print "1冊目のタイトル: #{books[0][:title]}\n"
