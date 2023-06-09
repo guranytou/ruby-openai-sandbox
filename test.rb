@@ -2,7 +2,7 @@ require 'openai'
 
 # OpenAI APIの設定
 client = OpenAI::Client.new(
-    access_token: "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"
+    access_token: ""
 )
 
 prompt = "You are an excellent bookseller.
