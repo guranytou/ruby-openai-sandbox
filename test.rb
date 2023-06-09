@@ -36,18 +36,18 @@ response = client.chat(
     }
 )
 
-print "response: #{response}\n" 
+puts "response: #{response}\n" 
 
 # 応答の整形
 response_data = JSON.parse(response["choices"][0]["message"]["content"].slice(/```json([\s\S]*?)```/).gsub('```json', '').gsub('```',''))
 books = response_data.map do |book|
   {
     title: book['title'],
-    description: book['description']
+    description: book['description'],
   }
 end
 
 
 # 出力
-print "books: #{books}\n"
-print "1冊目のタイトル: #{books[0][:title]}\n"
+puts "books: #{books}\n"
+puts "1冊目のタイトル: #{books[0][:title]}\n"
